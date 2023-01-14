@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+        <!--<link href="./weaponPage/stule_mobile.css"  rel="stylesheet" type="text/css" >-->
+        <link href="./mapsPage/stule_main.css" id="abaptive" rel="stylesheet" type="text/css" >
+        <link href="./Crooss/CrossDescS.css" id="CrossAdapt" rel="stylesheet" type="text/css" >
+	
+        
+        
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./assets/favico/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/favico/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/favico/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/favico/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./assets/favico/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./assets/favico/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./assets/favico/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./assets/favico/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="./assets/favico/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="./assets/favico/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="./assets/favico/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="./assets/favico/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="./assets/favico/mstile-310x310.png" />
+
+        
+	    <title>Справочник Блокады</title>
+    </head>
+    <body>
+        <div class="allContent">
+
+            <div class="header">
+                <div class="logoZone">
+                    <a href="https://vk.cc/chBPOq" class="logo" >
+                        <img src="./assets/av3.png" class="imageLogo">
+                    </a>
+                    <a href="./skin.html">
+                    <label class="logoText" id="logo">Справочник > Карты</label>
+                    </a>
+                </div>
+
+                <!-- Панелька поиска стандартная но в голове-->
+                <div class="headSearch" style="display: none;" id="headSelect">
+                    
+                    <img src="./assets/arrow.png" class="selectArrow">
+                    <select class="search_in_head" onchange="GetMap(this)">
+                        <option disabled selected>Не выбрано</option>
+                        <optgroup id="inneredSeachHead" label="Доступные скины:">
+                            
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="all" id="viewList">
+                
+                <!-- Приветсвенная панелька-->
+                <div class="helloArea" id="helloArea"  >
+                    <div class="RandomeCardZone">
+                        <div class="RandomCard" id="RandomCard">
+                            <label class="RandNameCard" id="randName">Карты сообщества<br> <br>Добавь свою карту!<br><a href="https://vk.cc/ck4izL" class="linktoatt">https://vk.cc/ck4izL</a></label>
+                            <img src="" class="RandomImg" id="randImg">
+                        </div>
+                    </div>
+                    <input class="randBtn" type="submit" onclick="GetRandomMap()" value="Случайная карта">
+                </div><!-- Конец приветственной панельки-->
+
+
+                <!-- Панелька с поиском по ТИПУ-->
+                <div class="weaponArea" id="weaponArea" style="display: none;">
+                    <div class="weaponCart">
+                        <img src="./assets/no.png" class="imageOnCart">
+                        <label class="textOnCart">Deagle</label>
+                    </div>
+                </div><!--КОНЕЦ ПАНЕЛЬКИ ПОИСКА ПО ТИПУ-->
+                
+                <!-- Панелька с поиском по ТИПУ версия вторая-->
+                <div class="weaponArea" id="Listew" style="display: none;">
+                    <!--
+                    <div class="AvtorArea">
+                        <div class="Labelix">SkillOFF</div>
+                        <div class="CardZones"> 
+                            <div class="weaponCart">
+                                <img src="./assets/no.png" class="imageOnCart">
+                                <label class="textOnCart">Deagle</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    -->
+
+                    
+
+                </div><!--КОНЕЦ ПАНЕЛЬКИ ПОИСКА ПО ТИПУ-->
+
+                <!-- Панелька со стандартным поиском-->
+                <div class="StandartSeach" id="StandartSeach" style="display: none;">
+                    <label style="font-size: 4vh;">Стандартный список всех карт</label>
+                    <div class="bigSearch">
+                    
+                        
+                        <select class="search_in_standart" onchange="GetMap(this)">
+                            <option selected disabled>Карта не выбрана</option>
+                            <optgroup id="inneredSeach" label="Доступные карты:">Стандартный cписок</optgroup>
+                        </select>
+                        <img src="./assets/arrow.png" class="selectArrow_st">
+                    </div>
+                </div><!-- Конец стандартной панельки поиска-->
+
+
+
+                <!-- Настройки поиска-->
+                <div class="SearchSettings">
+                        <!--Обычные кнопки вверху-->
+                        <div class="SearchColection col1">
+                            <img src="./assets/filter.png" alt="Фильтры">
+                        </div>
+                        <div class="SearchColection col2">
+                            <img src="./assets/spis.png" alt="Список">
+                        </div>
+                        <!--Обычные панельки-->
+                        <div class="SearchColPanel col1pan">
+                            <label class="settingsLabel">Размер карточек</label>
+                            <input type="range" min="0.5" max="3" oninput="remsize(this)" step="0.01" value="1">
+                            
+                            <label class="settingsLabel"> </label>
+                            <input type="submit" class="Setting" value="Все карты" placeholder="fff" onclick="AllMapsAndTeam(this)" id="Все">
+                            <label class="settingsLabel"> </label>
+                            <input class="Setting" type="submit" onclick="standartSeach(this)" value="Стандартный список">
+                                <label class="settingsLabel" id="lb_toSozd" style="display: none;">Приблизить создателя</label>
+                                <select class="Setting" id="sel_toSozd" onchange="scroler(this)" style="display: none;">
+                                    <option  selected disabled>Показать..</option>
+                                    <option  value="ARKANIS">ARKANIS</option> 
+                                    <option  value="SkillOFF">SkillOFF</option> 
+                                    <option  value="Novum Tempus">Novum Tempus</option>
+                                    <option  value="Калининград">Калининград</option>
+                                    <option  value="IFaza">IFaza</option>
+                                </select>
+                            
+                        </div>
+                        <div class="SearchColPanel col2pan">
+                            <label class="settingsLabel">Сорт. по командам</label>
+                            <select class="Setting" id="sortList" onchange="sotrByType(this)">
+                                <option  selected disabled>Искать</option>
+                                <option  value="Все">ффф</option> 
+                                <option  value="ARKANIS">ARKANIS</option> 
+                                <option  value="SkillOFF">SkillOFF</option> 
+                                <option  value="Novum Tempus">Novum Tempus</option>
+                            </select>
+                            <label class="settingsLabel">Сорт. по игрокам</label>
+                            <select class="Setting" id="sortList" onchange="sotrByType(this)">
+                                <option  selected disabled>Искать</option>
+                                
+                                <option  value="Калининград">Калининград</option>
+                                <option  value="IFaza">IFaza</option>
+                            </select>
+                            <label class="settingsLabel">Расширенный список</label>
+                            <input class="Setting" type="submit" onclick="FullList()" value="Показать">
+                            <!--<label class="settingsLabel">Тест список</label>
+                            <input class="Setting" type="submit" onclick="Test()" value="Открыть">-->
+                        </div>
+                        
+                        <!--Инфо панелька-->
+                        <div class="InfoPanel">
+                            
+                            <label><br>Выбери каким способом будешь искать оружее</label>
+                        </div>
+                </div>
+                <!-- Конец панельки настроек поиска-->
+
+
+            </div>
+            
+            
+            
+                <!--Панелька топов-->
+                <!--
+                <div class="TopPanelSetting" id="TopPanelSettings" style="display: none;">
+                <div class="Exit_TopPanelSetting">
+                    <img src="./assets/exit.png" class="logo exitButton" onclick="extiTopPanel()">
+                </div>
+                <label class="settingsLabel">Топ по:</label>
+                    <select class="Setting" id="TopType">
+                            <option value="Урон">Урон</option> 
+                            <option value="фУрон" selected>Фулл Урон</option> 
+                            <option value="Обойма">Обойма</option> 
+                            <option value="ФОбойма">Фулл обойма</option> 
+                            <option value="Запас">Запас</option>
+                            <option value="фЗапас">Фулл Запас</option> 
+                            <option value="Темп">Темп</option> 
+                            <option value="Дальность">Дальность</option>
+                    </select>
+                <label class="settingsLabel">Тип оружия:</label>
+                    <select class="Setting" id="sortListTop">
+                            <option selected value="Нет">Все оружия</option>
+                            <option value="Холодное">Холодное</option> 
+                            <option value="ПП">Пистолет-пулемёты</option> 
+                            <option value="Автомат">Автоматы</option> 
+                            <option value="Пулемёт">Пулемёты</option> 
+                            <option value="Винтовка">Снайперки</option>
+                            <option value="Дробовик">Дробовики</option> 
+                            <option value="Пистолет">Пистолеты</option> 
+                            <option value="Разное">Разное</option>
+                    </select>
+                    <label class="settingsLabel">- - - - - - - -</label>
+                    <input class="Setting" type="submit" onclick="GetTops()" value="Посмотреть результат">
+
+                </div>
+                -->
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            
+            <!--Просмотр скина!-->
+            <div class="all" id="viewWeapon" style="display: none;">
+                <div class="helpButtons">
+                    <input type="submit" style="border-top: 0.5vh solid white;" class="Buttonhelp" value="Подробно" id="mainTTX_button">
+                </div>
+
+                <div class="MainTTX">
+                    
+                    
+                    
+                
+                    
+                    <!--ТТХ-->
+                    
+                    <div class="ttxZone" >
+                        
+                        
+                        <!--Общие ТТХ-->
+                        <div class="ttx" id="mainTTX" >
+                            <!--<div class="rowLabel">
+
+                                <div class="ttxLabel">
+                                    <label>Ттх скина</label>
+                                    
+                                </div>
+                            </div>-->
+                            <div class="row">
+                            
+                                <label class="nameTTX">Название</label>
+                                <div class="row_small">
+                                    
+                                    <label class="fullLabel kk1f" id="damage_f">---</label>
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">ID карты</label>
+                                <div class="row_small">
+                                    <label class="fullLabel kk1f" id="clip_f">---</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Платформа</label>
+                                <div class="row_small">
+                                    <label class="kk1f" id="box_f">456</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Создатель</label>
+                                <div class="row_small">
+                                    <label class="kk1f" id="temp">123</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+
+
+
+
+                    
+
+
+
+                    <!--Картинка оружия-->
+                    <div class="imgZone">
+                        <div class="imgArea" id="imgZonePrev">
+                        </div>
+                        <input type="image" src="./assets/toLeft.png" id="toleft" class="ImgButtonSlide twod" onclick="toLeft(this)">
+                        <input type="image" src="./assets/toRight.png" id="toright" class="ImgButtonSlide oned" onclick="toRight(this)">
+                    </div>
+                </div>
+            </div> <!--конец !! Просмотр ОРУЖИЯ!
+            
+            
+            <img src="./assets/no.png" alt="" id="skin" class="skin">
+            -->
+            
+            
+            
+            
+            
+            
+            
+            <!--Панелька подробного списка-->
+            <div class="floatFullListPanel" id="floatFullListPanel"  style="display: none;"> 
+                <div class="floatFullListPanel_Zone" id="floatFullListPanel_Zone">
+                    
+                </div>
+                <input type="image" src="./assets/exit.png" class="exitMapsList" onclick="closer()">
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="footer">
+                <!--<input type="submit" class="selectButtonFooter" id="TimeButton" value="Расчитать время" onclick="calcTime(this)" style="display: none;">-->
+                <!--<input type="submit" class="selectButtonFooter" id="skinArea" style="display: none;" value="Изменить скин" onclick="skinList()">-->
+                    
+                    <div id="skinAreaList" style="display: none;">
+                        
+                    
+                        <select class="SkinSelect" onchange="ChangeSkin(this)">
+                            <option disabled selected>Не выбрано</option>
+                            <optgroup id="innerSkin" label="Доступные скины">
+                                
+                            </optgroup>
+                        </select>
+                    
+                    </div> 
+                </div>
+                
+                
+                
+                
+                
+            </div>
+        </div>
+
+
+
+
+
+        <div class="crossPanelButton">
+            <button class="CrossButton" onclick="SnowOnOff()">
+                <img src="./assets/snow.png" class="crossImageButton">
+            </button>
+        </div>
+
+        <div id="snowflakeContainer">
+            <span class="snowflake" id="ImG1gA"></span>
+        </div>
+
+
+
+        <!-- панелька кросс-боковая -->
+        <div class="FloatPanel">
+            <div class="floatTop">
+                <div class="floatUpText">
+                    Справочник
+                </div>
+                <ul>
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./skin.html">Скины</a></li>
+                    <li><a href="./weapon.html">Оружия</a></li>
+                    <li><a href="./maps.html">Карты</a></li>
+                    <li><a style="text-decoration: line-through;">Техника</a></li>
+                </ul>
+            </div>
+            <div class="floatBottom">
+                <div class="floatUpText">
+                    Информация
+                </div>
+                <ul>
+                    <li><a href="https://vk.com/fao_blockade">Группа вк</a></li>
+                    <li><a href="https://vk.me/join/3hJX5ImFBybTkTNLUc5E4VR2mspma9FVJhY=">Беседа вк</a></li>
+                    <li><a href="https://vk.cc/ci2QzI">Оригинал</a></li>
+                    <li><a href="https://vk.cc/ck4izL">Доб. Карту</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!--Скрипты-->
+        <script type="text/javascript" src="./mapsPage/adaptive.js"></script>
+        <script type="text/javascript" src="./mapsPage/maps.js"></script>
+        <script type="text/javascript" src="./Crooss/bone.js" id="boneJs"></script>
+    </body>
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+        <!--<link href="./weaponPage/stule_mobile.css"  rel="stylesheet" type="text/css" >-->
+        <link href="./Crooss/CrossDescS.css" id="CrossAdapt" rel="stylesheet" type="text/css" >
+        <link href="./weaponPage/stule_main.css" id="abaptive" rel="stylesheet" type="text/css" >
+
+        
+        
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./assets/favico/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/favico/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/favico/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/favico/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./assets/favico/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./assets/favico/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./assets/favico/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./assets/favico/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="./assets/favico/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="./assets/favico/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="./assets/favico/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="./assets/favico/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="./assets/favico/mstile-310x310.png" />
+
+        
+	    <title>Справочник Блокады</title>
+    </head>
+    <body>
+        <div class="allContent">
+
+            <div class="header">
+                <div class="logoZone">
+                    <a href="https://vk.cc/chBPOq" class="logo" >
+                        <img src="./assets/av3.png" class="imageLogo">
+                    </a>
+                    <a href="./weapon.html">
+                        <label class="logoText" id="logo">Справочник</label>
+                    </a>
+                    
+                </div>
+
+                <!-- Панелька поиска стандартная но в голове-->
+                <div class="headSearch" style="display: none;" id="headSelect">
+                    
+                    <img src="./assets/arrow.png" class="selectArrow">
+                    <select class="search_in_head" onchange="GetWeapon(this)">
+                        <option disabled selected>Не выбрано</option>
+                        <optgroup id="inneredSeachHead" label="Доступные оружия:">
+                            
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="all" id="viewList">
+                
+                <!-- Приветсвенная панелька-->
+                <div class="helloArea" id="helloArea">
+                    <div class="socialArea">
+                        <a href="https://vk.com/fao_blockade" class="socialLink"><img src="./assets/vk.png" class="linkImg" alt="Группа в Вконтакте"></a>
+                        <a href="https://vk.cc/ci2QzI" class="socialLink"><img src="./assets/gs.png" class="linkImg" alt="Оригинальный справочник"></a>
+                    </div>
+                    <!--<div class="TextHello" style="font-size: 4vh;">
+                        Для поиска оружия<br>
+                        Выбери способ | Тип поиска
+                    </div>-->
+                </div><!-- Конец приветственной панельки-->
+
+
+                <!-- Панелька с поиском по ТИПУ-->
+                <div class="weaponArea" id="weaponArea" style="display: none;">
+                    <div class="weaponCart">
+                        <img src="./assets/no.png" class="imageOnCart">
+                        <label class="textOnCart">Deagle</label>
+                    </div>
+                </div><!--КОНЕЦ ПАНЕЛЬКИ ПОИСКА ПО ТИПУ-->
+                
+
+
+                <!-- Панелька со стандартным поиском-->
+                <div class="StandartSeach" id="StandartSeach" style="display: none;">
+                    <label style="font-size: 4vh;">Выбери оружее из списка</label>
+                    <div class="bigSearch">
+                    
+                        
+                        <select class="search_in_standart" onchange="GetWeapon(this)">
+                            <option selected disabled>Оружее не выбрано</option>
+                            <optgroup id="inneredSeach" label="Доступные оружия:">Стандартный cписок</optgroup>
+                        </select>
+                        <img src="./assets/arrow.png" class="selectArrow_st">
+                    </div>
+                </div><!-- Конец стандартной панельки поиска-->
+
+
+
+                <!-- Настройки поиска-->
+                <!--
+                    fffffffffffffffffffffffffffffff
+                -->
+                <div class="SearchSettings">
+                    <!--Обычные кнопки вверху-->
+                    <div class="SearchColection col1">
+                        <img src="./assets/filter.png" alt="Фильтры">
+                    </div>
+                    <div class="SearchColection col2">
+                        <img src="./assets/spis.png" alt="Список">
+                    </div>
+                    <!--Обычные панельки-->
+                    <div class="SearchColPanel col1pan">
+                        <label class="settingsLabel">Поиск по типу</label>
+                        <select class="Setting" id="sortList" onchange="sotrByType(this)">
+                        
+                            <optgroup label="Не работает c" disabled></optgroup>
+                            <optgroup label="топами оружия" disabled></optgroup>
+                            <option disabled> </option>
+                            <optgroup label="Тип:">
+                                <option value="Холодное">Холодное</option> 
+                                <option value="ПП">Пистолет-пулемёты</option> 
+                                <option value="Автомат">Автоматы</option> 
+                                <option value="Пулемёт">Пулемёты</option> 
+                                <option value="Винтовка">Снайперки</option>
+                                <option value="Дробовик">Дробовики</option> 
+                                <option value="Пистолет">Пистолеты</option> 
+                                <option value="Разное">Разное</option>
+                            </optgroup>
+                                
+                        </select>
+                        <label class="settingsLabel">Топы</label>
+                        <input class="Setting" type="submit" onclick="openTopPanel(this)" value="Открыть настройки">
+                        
+                    </div>
+                    <div class="SearchColPanel col2pan">
+                        <label class="settingsLabel">Другое.</label>
+                        <input class="Setting" type="submit" onclick="standartSeach(this)" value="Стандартный список">
+
+                    </div>
+                    
+                    <!--Инфо панелька-->
+                    <div class="InfoPanel">
+                        
+                        <label><br>Выбери каким способом будешь искать оружее</label>
+                    </div>
+            </div>
+                
+                <!-- Конец панельки настроек поиска-->
+
+
+
+
+                </div>
+            
+            
+            
+                <!--Панелька топов-->
+                <div class="TopPanelSetting" id="TopPanelSettings" style="display: none;">
+                <div class="Exit_TopPanelSetting">
+                    <img src="./assets/exit.png" class="logo exitButton" onclick="extiTopPanel()">
+                </div>
+                <label class="settingsLabel">Топ по:</label>
+                    <select class="Setting" id="TopType">
+                        <optgroup label="Стандартные топы:">
+                            <option value="Урон">Урон</option> 
+                            <option value="фУрон" selected>Фулл Урон</option> 
+                            <option value="Обойма">Обойма</option> 
+                            <option value="ФОбойма">Фулл обойма</option> 
+                            <option value="Запас">Запас</option>
+                            <option value="фЗапас">Фулл Запас</option> 
+                            <option value="Темп">Темп</option> 
+                            <option value="Дальность">Дальность</option>
+                        </optgroup>
+                        <optgroup label="Топы по времени убийства:">
+                            <option value="100st">100хп [Без брони], Сток прокачка</option>
+                            <option value="100fl">100хп [Без брони], Фулл прокачка</option> 
+                            <option value="150st">100хп [Укреп. броня] , Сток прокачка</option> 
+                            <option value="150fl">100хп [Укреп. броня], Фулл прокачка</option>
+                        </optgroup>
+                    </select>
+                <label class="settingsLabel">Тип оружия:</label>
+                    <select class="Setting" id="sortListTop">
+                            <option selected value="Нет">Все оружия</option>
+                            <option value="Холодное">Холодное</option> 
+                            <option value="ПП">Пистолет-пулемёты</option> 
+                            <option value="Автомат">Автоматы</option> 
+                            <option value="Пулемёт">Пулемёты</option> 
+                            <option value="Винтовка">Снайперки</option>
+                            <option value="Дробовик">Дробовики</option> 
+                            <option value="Пистолет">Пистолеты</option> 
+                            <option value="Разное">Разное</option>
+                    </select>
+                    <label class="settingsLabel">- - - - - - - -</label>
+                    <input class="Setting" type="submit" onclick="GetTops()" value="Посмотреть результат">
+
+                </div>
+            
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            
+            <!--Просмотр ОРУЖИЯ!-->
+            <div class="all" id="viewWeapon" style="display: none;">
+                <div class="helpButtons">
+                    <input type="submit" style="border-top: 0.5vh solid white;" class="Buttonhelp" value="Общее" onclick="openMainTTX()" id="mainTTX_button">
+                    <input type="submit" class="Buttonhelp" value="Подробно"  onclick="openOtherTTX()" id="otherTTX_button">
+                </div>
+
+                <div class="MainTTX">
+                    
+                    
+                    
+                
+                    
+                    <!--ТТХ-->
+                    
+                    <div class="ttxZone" >
+                        
+                        
+                        <!--Общие ТТХ-->
+                        <div class="ttx" id="mainTTX" >
+                            <div class="rowLabel">
+
+                                <div class="ttxLabel">
+                                    <label>Без прокачки</label>
+                                    <label>С прокачкой</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Урон</label>
+                                <div class="row_small">
+                                    <label id="damage">123</label>
+                                    <label class="fullLabel" id="damage_f">456</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Обойма</label>
+                                <div class="row_small">
+                                    <label id="clip">123</label>
+                                    <label class="fullLabel" id="clip_f">456</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Запас</label>
+                                <div class="row_small">
+                                    <label id="box">123</label>
+                                    <label class="fullLabel" id="box_f">456</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Темп</label>
+                                <div class="row_small">
+                                    <label id="temp">123</label>
+                                    <label id="temp2">456</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Дальность</label>
+                                <div class="row_small">
+                                    <label id="range">123</label>
+                                    <label id="range2">456</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Перезарядка</label>
+                                <div class="row_small">
+                                    <label id="reload">123</label>
+                                    <label id="reload2">456</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+
+
+
+
+                        <!--Подробные ТТХ-->
+                        <div class="ttx" id="otherTTX"  style="display: none;" > 
+                            <div class="rowLabel noRotateRow">
+
+                                <div class="ttxLabel">
+                                    <label>Без прокачки</label>
+                                    <label>С прокачкой</label>
+                                </div>
+                            </div>
+                            <div class="row noRotateRow">
+                            
+                                <label class="nameTTX">Урон</label>
+                                <div class="row_small lowText">
+                                    <label id="damage2">123</label>
+                                    <label class="fullLabel" id="damage_f2">456</label>
+                                </div>
+                            </div>
+                            <div class="row noRotateRow">
+                            
+                                <label class="nameTTX">Обойма</label>
+                                <div class="row_small lowText">
+                                    <label id="clip2">123</label>
+                                    <label class="fullLabel" id="clip_f2">456</label>
+                                </div>
+                            </div>
+                            <div class="row noRotateRow">
+                            
+                                <label class="nameTTX">Запас</label>
+                                <div class="row_small lowText">
+                                    <label id="box2">123</label>
+                                    <label class="fullLabel" id="box_f2">456</label>
+                                </div>
+                            </div>
+                            <div class="row noRotateRow">
+                            
+                                <label class="nameTTX">Темп</label>
+                                <div class="row_small lowText">
+                                    <label id="temp3">123</label>
+                                    <label id="temp4">456</label>
+                                </div>
+                            </div>
+                            <div class="row noRotateRow">
+                            
+                                <label class="nameTTX">Дальность</label>
+                                <div class="row_small lowText">
+                                    <label id="range3">123</label>
+                                    <label id="range4">456</label>
+                                </div>
+                            </div>
+                            <div class="row noRotateRow">
+                            
+                                <label class="nameTTX">Перезарядка</label>
+                                <div class="row_small lowText">
+                                    <label id="reload3">123</label>
+                                    <label style="opacity: 0;">--</label>
+                                </div>
+                            </div>
+                            <div class="row noRotateRow">
+                            
+                                <label class="nameTTX">Цена</label>
+                                <div class="row_small lowText">
+                                    <label id="price">123</label>
+                                    <label style="opacity: 0;">--</label>
+                                </div>
+                            </div>
+                            <div class="row noRotateRow">
+                            
+                                <label class="nameTTX">Тип</label>
+                                <div class="row_small lowText">
+                                    <label id="type">123</label>
+                                    <label style="opacity: 0;">--</label>
+                                </div>
+                            </div>
+                            <div class="row noRotateRow">
+                            
+                                <label class="nameTTX">Тип урона</label>
+                                <div class="row_small lowText">
+                                    <label id="type_dm">123</label>
+                                    <label style="opacity: 0;">--</label>
+                                </div>
+                            </div>
+                            <div class="row noRotateRow">
+                            
+                                <label class="nameTTX">Серия</label>
+                                <div class="row_small lowText">
+                                    <label id="serias">123</label>
+                                    <label style="opacity: 0;">--</label>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                    
+
+
+
+                    <!--Картинка оружия-->
+                    <div class="imgZone">
+                        <div class="imgArea">
+                            <img src="./assets/no.png" alt="" id="skin" class="skin">
+                        </div>
+                    </div>
+                </div>
+            </div> <!--конец !! Просмотр ОРУЖИЯ!-->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="footer">
+                <input type="submit" class="selectButtonFooter" id="TimeButton" value="Расчитать время" onclick="calcTime(this)" style="display: none;">
+                <input type="submit" class="selectButtonFooter" id="skinArea" style="display: none;" value="Изменить скин" onclick="skinList()">
+
+                    <div id="skinAreaList" style="display: none;">
+                        
+                        <select class="SkinSelect" onchange="ChangeSkin(this)">
+                            <option disabled selected>Не выбрано</option>
+                            <optgroup id="innerSkin" label="Доступные скины">
+                                
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--Панель плавующая с временем убийства-->
+
+        <div class="TimePanel" id="TimePanel" style="display: none;">
+            <div class="TimeSettingsArea">
+                <input type="number" min="0" max="99" placeholder="% Доп.Урона" class="SettingTime"id="upDm" oninput="calcTime()">
+                <input type="number" min="0" max="99" placeholder="% Защиты" class="SettingTime" id="res" oninput="calcTime()">
+
+                <select id="armHead" class="SettingTime" onchange="calcTime()">
+                    <option disabled>Каска</option>
+                    <option value="0">Нет</option>
+                    <option value="1">Стандарт</option>
+                    <option value="2" selected>Укреплённая</option>
+                </select>
+                <select id="armBody" class="SettingTime" onchange="calcTime()">
+                    <option disabled>Броня</option>
+                    <option value="0">Нет</option>
+                    <option value="1">Стандарт</option>
+                    <option value="2" selected>Укреплённая</option>
+                </select>
+                <select id="pump" class="SettingTime" onchange="calcTime()">
+                    <option disabled>Тип прокачки</option>
+					<option value="stok" >Сток</option>
+					<option value="full" selected>Фулл</option>
+                </select>
+            </div>
+            
+            <div class="TimeArea">
+                <div class="t_row">
+                    <label style="color: orange;">Часть тела</label>
+                    <label style="color: orange;">Кол. выстр.</label>
+                    <label style="color: orange;">Время (мс)</label>
+                </div>
+                
+                <div class="t_row">
+                    <label class="green">Голова</label>
+                    <label id="headNUM">--</label>
+                    <label id="headTIME">--</label>
+                </div>
+                
+                <div class="t_row">
+                    <label class="green">Тело</label>
+                    <label id="bodyNUM">--</label>
+                    <label id="bodyTIME">--</label>
+                </div>
+                <div class="t_row">
+                    <label class="green">Плечо</label>
+                    <label id="UpstikNUM">--</label>
+                    <label id="UpstikTIME">--</label>
+                </div>
+
+                <div class="t_row">
+                    <label class="green">Пред-<br>плечье</label>
+                    <label id="stikNUM">--</label>
+                    <label id="stikTIME">--</label>
+                </div>
+
+                <div class="t_row">
+                    <label class="green">Кисть</label>
+                    <label id="DownstikNUM">--</label>
+                    <label id="DownstikTIME">--</label>
+                </div>
+                
+                <div class="t_row">
+                    <label class="green">Бедро</label>
+                    <label id="bedroNUM">--</label>
+                    <label id="bedroTIME">--</label>
+                </div>
+
+                <div class="t_row">
+                    <label class="green">Голень</label>
+                    <label id="golenNUM">--</label>
+                    <label id="golenTIME">--</label>
+                </div>
+
+                <div class="t_row">
+                    <label class="green">Ступня</label>
+                    <label id="nogiNUM">--</label>
+                    <label id="nogiTIME">--</label>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="crossPanelButton">
+            <button class="CrossButton" onclick="SnowOnOff()">
+                <img src="./assets/snow.png" class="crossImageButton" id="ImG1gA">
+            </button>
+        </div>
+
+        <div id="snowflakeContainer">
+            <span class="snowflake" id="ImG1gA"></span>
+        </div>
+
+
+        <!-- панелька кросс-боковая -->
+        <div class="FloatPanel">
+            <div class="floatTop">
+                <div class="floatUpText">
+                    Справочник
+                </div>
+                <ul>
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./skin.html">Скины</a></li>
+                    <li><a href="./weapon.html">Оружия</a></li>
+                    <li><a href="./maps.html">Карты</a></li>
+                    <li><a style="text-decoration: line-through;">Техника</a></li>
+                </ul>
+            </div>
+            <div class="floatBottom">
+                <div class="floatUpText">
+                    Информация
+                </div>
+                <ul>
+                    <li><a href="https://vk.com/fao_blockade">Группа вк</a></li>
+                    <li><a href="https://vk.me/join/3hJX5ImFBybTkTNLUc5E4VR2mspma9FVJhY=">Беседа вк</a></li>
+                    <li><a href="https://vk.cc/ci2QzI">Оригинал</a></li>
+                    <li><a href="https://vk.cc/ck4izL">Доб. Карту</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Скрипты-->
+        <script type="text/javascript" src="./weaponPage/adaptive.js"></script>
+        <script type="text/javascript" src="./weaponPage/weapon.js"></script>
+        <script type="text/javascript" src="./Crooss/bone.js" id="boneJs"></script>
+
+        
+        
+        
+        
+    </body>
+</html>

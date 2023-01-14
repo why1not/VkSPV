@@ -1,0 +1,903 @@
+@charset "UTF-8";
+:root{
+    --back: #161716;
+    --border-black: #100f0c;
+    --row: #2E2F2E;
+    --grayText: #adaead;
+    --green: #d3ff3f;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--back);
+}
+.invisible{
+    visibility: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+.SmallTTX{
+    font-size: 3vh !important;
+    text-align: center;
+}
+@font-face {
+	font-family: 'b3d'; 
+	src: url("../assets/b3d.ttf"); 
+}
+ input:hover{
+     
+    cursor: pointer;
+ }
+ select:hover{
+     
+    cursor: pointer;
+ }
+.allContent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    min-width: 100%;
+    height: 100%;
+}
+.header{
+    width: 100%;
+    height: 7%;
+    
+    background-color: var(--back);
+    border-bottom: 0.5vh solid var(--border-black);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer{
+    width: 100%;
+    height: 7%;
+
+    background-color: var(--back);
+    border-top: 0.5vh solid var(--back);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.all{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--border-black);
+}
+
+
+.TopPanelSetting{
+    position: absolute;
+    height: 45vh;
+    width: 80vw;
+    background-color: var(--back);
+    border: 0.5vh solid var(--border-black);
+    box-shadow: 13px 10px 10px 0px rgba(16, 12, 16, 0.7);
+    top: 25%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.Exit_TopPanelSetting{
+    position:absolute;
+    height: 4vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.exitButton{
+    margin-right: 0.5vw;
+}
+.exitButton:hover{
+    cursor: pointer;
+}
+
+
+
+.footerButtom{
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 3vh;
+}
+.TimeButton{
+    text-decoration: none;
+    background-color: var(--border-black);
+    color: white;
+    height: 5vh;
+    min-width: 80%;
+    border-radius: 10px;
+    border: none;
+    
+    font-family: monospace;
+    font-size: 2.4vh;
+}
+
+.TimeButton:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logoZone{
+    height: 100%;
+    min-width: 30%;
+    
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+
+    
+}
+.logo{
+    height: 90%;
+}
+.imageLogo{
+    height: 100%;
+}
+.logoText{
+    display: none;
+    color: white;
+    font-size: 5vh;
+    font-family: 'b3d';
+    
+	letter-spacing: 1.8px;
+    margin-left: 1vw;
+
+}
+.headSearch{
+    width: 50%;
+    height: 100%;
+    margin-right: 2vw;
+
+    display: flex;
+    
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.search_in_head{
+    width: 50%;
+    max-width: 50%;
+    height: 5vh;
+    border:none;
+    outline: none !important;
+    appearance: none;
+    padding: 0px 5px 0px 5px;
+    border-bottom-left-radius: 11px;
+    border-top-left-radius: 11px;
+}
+.selectArrow{
+    background-color: white;
+    border: none;
+    height: 2vh;
+    padding: 1.5vh;
+    border-bottom-right-radius: 11px;
+    border-top-right-radius: 11px;
+}
+.selectButtonFooter{
+    
+    width: 40vw;
+    height: 4.5vh;
+    border:none;
+    outline: none !important;
+    appearance: none;
+    margin: 1vh 0vh 0.5vh 0vh;
+    border-radius: 11px;
+    background-color: var(--grayText);
+    color: black;
+    text-align: center;
+}
+
+.SkinSelect{
+    width: 40vw;
+    
+    height: 4.5vh;
+    border:none;
+    outline: none !important;
+    
+    margin: 1vh 0vh 0.5vh 0vh;
+    border-radius: 11px;
+    background-color: var(--grayText);
+    color: black;
+}
+
+
+
+
+.helpButtons{
+    
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+    height: 4vh;
+    width: 100%;
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+.Buttonhelp{
+    text-decoration: none;
+    background: none;
+    color: white;
+    
+    border: none;
+    text-align: center;
+    
+    font-size: 3vh;
+    font-family: monospace;
+}
+
+
+
+
+.MainTTX{
+    
+    height: 80%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.ttxZone{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: scroll;
+    
+}
+.imgZone{
+    height: 37%;
+    width: 90%;
+}
+
+
+
+
+
+.ttx{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: flex-start;
+    align-items: center;
+}
+.row_small{
+    
+    background: linear-gradient(90deg, rgba(52,54,52,1) 0%, rgba(69,69,69,1) 55%, rgba(71,71,71,0.69) 69%, rgba(75,75,75,0) 100%);
+    
+
+
+    min-height: calc(100% - 2vh);
+
+
+	font-family: "b3d";
+    font-size: inherit;
+
+
+    overflow:hidden;
+
+    color: white;
+    padding-right: 0%;
+
+    /*
+    background-color: lightcoral;
+    */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    
+}
+.row{
+    min-height: 5vh;
+    width: 75%;
+    transform-origin: 50px 50px;
+    transform: rotate(-3deg);
+    margin-top: 1%;
+}
+#otherTTX{
+    overflow-y: auto;
+}
+.rowLabel{
+    display: none;
+    height: 6%;
+    width: 75%;
+    transform-origin: 50px 50px;
+    transform: rotate(-3deg);
+}
+.ttxLabel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    color: orange;
+    font-family: monospace;
+    
+    font-size: 2.2vh;
+    
+    padding-right: 23%;
+}
+.nameTTX{
+    font-family: monospace;
+    color: var(--grayText);
+    font-size: 2vh;
+    font-weight: 700;
+}
+.fullLabel{
+    color: var(--green) !important;
+}
+.kk1f{
+    font-size: 3vh;
+    white-space: wrap;
+    
+    padding: 0.55vh;
+    width: 78%;
+}
+
+
+
+.noRotateRow{
+    transform-origin: 50px 50px !important;
+    transform: rotate(0deg) !important;
+    margin: 1.5vw !important;
+}
+.lowText{
+    font-size: 3.5vh !important;
+}
+
+
+
+
+.imgZone{
+    display: flex;
+    
+    align-items: center;
+    background: radial-gradient(circle, rgba(87,67,21,0.5) 0%, rgba(87,67,21,0.36) 23%, rgba(87,67,21,0.2) 43%, rgba(87,67,21,0) 75%);
+}
+.imgArea{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+.skin{
+    width: 100%;
+    max-height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.weaponArea{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    justify-content: center;
+    align-content: flex-start
+}
+.helloArea{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.SearchSettings{
+    position: absolute;
+    top: 92%;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    background-color: var(--back);
+    border-top: 0.5vh solid var(--border-black);
+    border-bottom: 0.5vh solid var(--border-black); 
+    
+    overflow: hidden;
+}
+
+
+.SearchSettings:hover{
+    border-right: none;
+    
+}
+.SearchColectionArea{
+    width: 100%;
+    display: flex;
+    background-color: var(--row);
+}
+.SearchColection{
+    width: 50%;
+    height: 7vh;
+    background-color: var(--row);
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-out 0s;
+}
+.AnimPan{
+    width: 0%;
+    border-top: 0.5vh solid var(--green);
+    transition: all 0.7s ease-out 0.5s;
+}
+.SearchColection > img{
+    max-height: 70%;
+}
+.SearchColection:hover{
+    background-color: var(--green);
+    
+}
+.SearchColection:hover > img{
+    filter: invert(100%);
+}
+.SearchColection:hover ~ .InfoPanel{
+    opacity: 0%;
+}
+
+.InfoPanel{
+    
+    height: calc(100% - 7vh);
+    border-top: 0.5vh solid var(--row);
+    border-bottom: 0.5vh solid var(--row);
+    opacity: 100%;
+    width: 100%;
+    transition: all 0.7s linear 0s;
+    color: var(--grayText);
+    font-family: 'b3d';
+    text-align: center;
+    font-size: 4vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.SearchColPanel{
+    height: 0%;
+    border-top: 0.5vh solid var(--green);
+    border-bottom: 0.5vh solid var(--green);
+    opacity: 0%;
+    width: 0%;
+    transition: all 0.32s linear 0s;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+.col2pan{
+    transform-origin: center left;
+    transform: rotateY(180deg);
+    left: 100%;
+    position: relative;
+    
+}
+.col1:hover ~ .col1pan{
+    width: 100%;
+    height: calc(100% - 7vh);
+    opacity: 100%;
+}
+.col2:hover ~ .col2pan{
+    width: 100%;
+    height: calc(100% - 7vh);
+    opacity: 100%;
+}
+.col2pan *{
+    
+    transform:scaleX(-1);
+}
+
+.SearchColPanel:hover{
+    
+    height: calc(100% - 7vh);
+    opacity: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+.Setting{
+    width: 85%;
+    
+	outline: none !important;
+    text-align: center;
+    height: 5vh;
+    background-color: var(--row);
+    color: var(--grayText);
+    font-family: 'b3d';
+    font-size: 3vh;
+    border: none;
+    padding: 0px;
+    border-radius: 10px;
+    border: 3px solid var(--row);
+    
+}
+.settingsLabel{
+    font-family: 'b3d';
+    font-size: 3vh;
+    color: var(--row);
+    width: 100%;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.socialArea{
+    height: 20%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.TextHello{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'b3d';
+    font-size: 3.4vh !important;
+    
+	letter-spacing: 1.5px;
+	word-spacing: 2px;
+}
+.socialLink{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+.linkImg{
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.weaponCart{
+    height: 16vh;
+    width: 45%;
+    max-width: 45%;
+    border-radius: 10px;
+    margin: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.imageOnCart{
+    width: 100%;
+    border: 3px solid var(--back);
+    border-bottom: none;
+    
+    background-color: #dceaf31e;
+
+    border-top-left-radius: 5mm;
+    border-top-right-radius: 5mm;
+    
+}
+.textOnCart{
+    width: 100%;
+    min-height: 4vh;
+    text-align: center;
+    color: white;
+    background-color: var(--back);
+    border: 3px solid var(--back);
+    border-top: none;
+    font-family: monospace;
+    font-size: 2vh;
+    
+    border-bottom-left-radius: 5mm;
+    border-bottom-right-radius: 5mm;
+}
+
+
+
+
+
+
+
+
+
+.Setting{
+    min-width: 85%;
+    
+    font-size: 2vh;
+
+	outline: none !important;
+    text-align: center;
+    height: 5vh;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0px;
+    border-radius: 10px;
+    border: 3px solid var(--row);
+    
+}
+.settingsLabel{
+    color: var(--grayText);
+    font-family: monospace;
+    font-size: 2vh;
+    margin-top: 4.5vw;
+}
+
+
+
+
+
+
+
+
+
+
+.StandartSeach {
+    
+    height: 55vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: white;
+    font-family: "b3d";
+}
+.bigSearch{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.search_in_standart{
+    width: 28vh;
+    max-width: 90%;
+    height: 8vh;
+    border:none;
+    font-size: 2.3vh;
+    outline: none !important;
+    appearance: none;
+    padding: 0px 5px 0px 5px;
+    border-bottom-left-radius: 11px;
+    border-top-left-radius: 11px;
+}
+.selectArrow_st{
+    background-color: white;
+    border: none;
+    height: 3vh;
+    padding: 2.5vh;
+    border-bottom-right-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.TimePanel{
+    position: absolute;
+    left: 0px;
+    top: 100vh;
+    width: 100%;
+    min-height: 7vh;
+    background-color: var(--back);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
+.TimeArea{
+    width: 90%;
+    display: flex;
+    
+    flex-direction: column;
+    margin-bottom: 4vh;
+}
+.t_row{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.t_row > label {
+    width: 30%;
+    text-align: center;
+    border: 0.35vh solid var(--border-black);
+    padding: 1.1vh;
+    font-size: 3vh;
+    font-family: 'b3d';
+    color: var(--grayText);
+}
+.t_row:hover > label{
+    background-color: var(--row);
+    cursor: pointer;
+}
+.green{
+    color: var(--green) !important;
+}
+
+
+.TimeSettingsArea{
+    width: 90%;
+    min-width: 90vw;
+    min-height: 7vh;
+    border-top: 0.5vh solid var(--border-black);
+    padding: 2vw;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    flex-wrap: wrap;
+}
+.SettingTime{
+    
+    margin: 2vw;
+    font-size: 2vh;
+    width: 40%;
+    border: 0.5vh solid var(--grayText);
+    outline: none !important;
+    border-radius: 10px;
+    height: 4vh;
+    
+    padding-left: 1vw;
+
+    font-family: monospace;
+    font-weight: 700;
+}
+.TimeSettingsArea > input{
+    appearance: none;
+    outline: none !important;
+    
+}
